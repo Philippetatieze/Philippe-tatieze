@@ -1,6 +1,6 @@
 #  Analyse de la Dette Brute du Québec 2024-2025
 
-## 1. Background & Overview
+## 1. Contexte et aperçu
 **Organisation :** Ministère des Finances du Québec (Données Ouvertes).  
 Cette analyse vise à auditer la structure de la dette brute du Québec pour identifier les risques de refinancement et la répartition des types de produits financiers.
 
@@ -17,7 +17,7 @@ Cette analyse vise à auditer la structure de la dette brute du Québec pour ide
 
 ---
 
-## 2. Data Structure Overview (ETL Process)
+## 2. Présentation des structures de données (ETL Process)
 Le projet suit une architecture hybride **ETL (Extract, Transform, Load)** pour garantir la propreté et la performance des données.
 
 ### Étape 1 : Extraction & Nettoyage (Power Query)
@@ -32,7 +32,7 @@ Injection des données dans PostgreSQL pour centraliser la logique métier via d
 
 ---
 
-## 3. Executive Deep Dive
+## 3. Analyse approfondie pour les cadres
 L'analyse montre une dette solide, principalement sécurisée sur le long terme, ce qui protège la province contre la volatilité immédiate des taux d'intérêt.
 
 ![Capture du Dashboard Power BI](LIEN_VERS_IMAGE_DASHBOARD)
@@ -41,7 +41,7 @@ L'analyse montre une dette solide, principalement sécurisée sur le long terme,
 
 ---
 
-## 4. Insights Deep Dive
+## 4. Analyse approfondie
 * **Le "Trou" de 2025 :** Les requêtes SQL ont révélé qu'aucun titre majeur n'arrive à échéance en 2025, offrant une fenêtre stratégique pour le refinancement.
 * **Stabilité Long Terme :** Plus de 60% de la dette est contractée à plus de 5 ans, verrouillant des taux historiquement bas.
 * **Analyse des Spreads :** Certains produits affichent un rendement investisseur supérieur au coupon, indiquant une valorisation positive du crédit du Québec sur les marchés.

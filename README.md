@@ -13,7 +13,7 @@ Cette analyse vise à auditer la structure de la dette brute du Québec pour ide
 * [🌐 Source des données (Données Québec)](https://www.donneesquebec.ca/)
 * [📂 Voir les scripts SQL (Views)](SQL/vues_dette.sql)
 * [🛠️ Voir le script de nettoyage (Power Query)](Scripts/nettoyage_power_query.txt)
-*  [📈 Visualisation Power BI (Capture ou PDF)](LIEN_VERS_IMAGE_OU_PDF)
+*  [📈 Visualisation Power BI https://github.com/Philippetatieze/Philippe-tatieze/blob/main/jeuxemprunt.pbix
 
 ---
 

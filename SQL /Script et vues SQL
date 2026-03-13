@@ -1,0 +1,54 @@
+-- ==========================================================
+-- PROJET : ANALYSE DE LA DETTE BRUTE DU QUÉBEC
+-- OBJECTIF : Transformations SQL (Vues) pour Power BI
+-- ==========================================================
+
+-- 1. VUE : ANALYSE DE LA LIQUIDITÉ (MONTANT TOTAL PAR PRODUIT)
+-- Cette vue permet d'identifier les instruments financiers les plus utilisés.
+CREATE OR REPLACE VIEW vw_analyse_liquidite AS
+SELECT 
+    "Produit_Financier",
+    SUM("Dette_brute_$") AS total_dette_cad,
+    COUNT(*) AS nombre_emissions,
+    ROUND(AVG("Dette_brute_$"), 2) AS montant_moyen
+FROM public.jeuxemprunt
+GROUP BY "Produit_Financier";
+
+
+-- 2. VUE : STRUCTURE DE LA DETTE (SEGMENTATION PAR MATURITÉ)
+-- Utilisation d'une logique CASE WHEN pour définir les horizons de risques.
+CREATE OR REPLACE VIEW vw_structure_dette AS
+SELECT 
+    *,
+    CASE 
+        WHEN "Annee"::integer <= 2026 THEN 'Court Terme (< 1 an)'
+        WHEN "Annee"::integer BETWEEN 2027 AND 2031 THEN 'Moyen Terme (2-5 ans)'
+        ELSE 'Long Terme (> 5 ans)'
+    END AS segment_maturite
+FROM public.jeuxemprunt;
+
+
+-- 3. VUE : PERFORMANCE ET SPREAD DE RENDEMENT
+-- Calcul de l'écart entre le taux de coupon et le rendement du marché.
+CREATE OR REPLACE VIEW vw_performance_rendement AS
+SELECT 
+    "Annee",
+    "Produit_Financier",
+    "Taux_Coupon",
+    "Rendement_Investisseur",
+    ROUND(("Rendement_Investisseur" - "Taux_Coupon"), 4) AS spread_rendement,
+    "Dette_brute_$"
+FROM public.jeuxemprunt
+WHERE "Taux_Coupon" IS NOT NULL;
+
+
+-- 4. VUE : CALENDRIER DE REFINANCEMENT ANNUEL
+-- Vue simplifiée pour identifier les pics de remboursement et le "trou" de 2025.
+CREATE OR REPLACE VIEW vw_calendrier_refinancement AS
+SELECT 
+    "Annee",
+    SUM("Dette_brute_$") AS montant_a_refinancer,
+    "Devise"
+FROM public.jeuxemprunt
+GROUP BY "Annee", "Devise"
+ORDER BY "Annee" ASC;

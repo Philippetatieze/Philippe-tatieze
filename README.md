@@ -10,10 +10,10 @@ Cette analyse vise à auditer la structure de la dette brute du Québec pour ide
 * **Optimisation de Liquidité :** Identification des besoins de financement par type de produit financier.
 
 **Liens du Projet :**
-* [🌐 Source des données (Données Québec)]https://beta.donneesquebec.ca/recherche/dataset/titres-et-emprunts-emis-par-le-quebec
-* [📂 Voir les scripts SQL (Views)]https://github.com/Philippetatieze/Philippe-tatieze/blob/main/SQL%20/Script%20et%20vues%20SQL
-* [🛠️ Voir le script de nettoyage (Power Query)]https://github.com/Philippetatieze/Philippe-tatieze/blob/de9b0b664930a7e5e5623ddec1c5d5e271f40628/jeuxemprunt.csv
-*  [📈 Visualisation Power BI https://github.com/Philippetatieze/Philippe-tatieze/blob/main/jeuxemprunt.pbix
+* [ Source des données (Données Québec)]https://beta.donneesquebec.ca/recherche/dataset/titres-et-emprunts-emis-par-le-quebec
+* [ Voir les scripts SQL (Views)]https://github.com/Philippetatieze/Philippe-tatieze/blob/main/SQL%20/Script%20et%20vues%20SQL
+* [ Voir le script de nettoyage (Power Query)]https://github.com/Philippetatieze/Philippe-tatieze/blob/de9b0b664930a7e5e5623ddec1c5d5e271f40628/jeuxemprunt.csv
+*  [ Visualisation Power BI https://github.com/Philippetatieze/Philippe-tatieze/blob/main/jeuxemprunt.pbix
 
 ---
 

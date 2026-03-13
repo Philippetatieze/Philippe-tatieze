@@ -28,14 +28,14 @@ Le fichier CSV original présentait des problèmes de formatage (séparateurs de
 Injection des données dans PostgreSQL pour centraliser la logique métier via des **Vues SQL**.
 * **Action :** Création de 4 vues calculées pour alléger le rapport Power BI (Pushdown technique).
 
-> ![Image du Modèle de Données](LIEN_VERS_IMAGE_MODELE_DONNEES)
+> <img width="1456" height="722" alt="Modèle des données" src="https://github.com/user-attachments/assets/42f85b2b-6de3-40ad-b89c-02fbbe5bb894" />
 
----
+--
 
 ## 3. Analyse approfondie pour les cadres
 L'analyse montre une dette solide, principalement sécurisée sur le long terme, ce qui protège la province contre la volatilité immédiate des taux d'intérêt.
 
-![Capture du Dashboard Power BI](LIEN_VERS_IMAGE_DASHBOARD)
+<img width="1306" height="736" alt="Rapport final" src="https://github.com/user-attachments/assets/2cf11e7f-eecb-46d6-ad88-1180cf8cc3b2" />
 
 **Problématique Business résolue :** L'identification d'un calendrier de remboursement irrégulier permet d'anticiper les pressions sur l'encaisse du gouvernement, notamment en identifiant les années "creuses" pour de nouvelles émissions.
 

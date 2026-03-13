@@ -26,7 +26,7 @@ Le fichier CSV original présentait des problèmes de formatage (séparateurs de
 
 ### Étape 2 : Chargement & Transformation SQL (PostgreSQL)
 Injection des données dans PostgreSQL pour centraliser la logique métier via des **Vues SQL**.
-* **Action :** Création de 4 vues calculées pour alléger le rapport Power BI (Pushdown technique).
+* **Action :** Création de 4 vues calculées pour alléger le rapport Power BI .
 
 > <img width="1456" height="722" alt="Modèle des données" src="https://github.com/user-attachments/assets/42f85b2b-6de3-40ad-b89c-02fbbe5bb894" />
 
